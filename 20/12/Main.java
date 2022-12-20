@@ -18,6 +18,7 @@ public class Main{
         m1.setTarga(targa);
         System.out.println("Inserisci il tempo di percorrenza della macchina: ");
         tempo = s.nextDouble();
+        s.nextLine();
         m1.setTempo(tempo);
         //inserisco i dati della seconda macchina
         System.out.println("Inserisci la targa della macchina: ");
@@ -26,6 +27,7 @@ public class Main{
         System.out.println("Inserisci il tempo di percorrenza della macchina: ");
         tempo = s.nextDouble();
         m2.setTempo(tempo);
+        s.nextLine();
         //inserisco i dati della terza macchina
         System.out.println("Inserisci la targa della macchina: ");
         targa = s.nextLine();
@@ -33,6 +35,7 @@ public class Main{
         System.out.println("Inserisci il tempo di percorrenza della macchina: ");
         tempo = s.nextDouble();
         m3.setTempo(tempo);
+        s.nextLine();
 
 
 
