@@ -10,7 +10,7 @@ public class ContoCorrente {
         saldo += importo;
     }
 
-    public void preleva(double importo){
+    public void preleva(double importo) throws IllegalArgumentException{
         if(importo>saldo){
             throw new IllegalArgumentException("Non hai abbastanza soldi");
         }else if(importo-saldo<saldo){
