@@ -53,8 +53,13 @@ public class GestioneOrari extends Exception{
     public int differenzaOrari(int h1, int m1, int s1, int h2, int m2, int s2) throws GestioneOrari{
         //check if orarioValido
         if(orarioValido(h1, m1, s1) && orarioValido(h2, m2, s2)){
-            int tot1 = s1*3600 + m1*60 + h1;
+            int tot1 = h1*3600 + m1*60 + s1;
             int tot2 = h2*3600 + m2*60 + s2;
+            if(tot1<tot2){
+                int temp = tot1;
+                tot1 = tot2;
+                tot2 = temp;
+            }
             int diff = tot1 - tot2;
             return diff;
         }else{
