@@ -42,6 +42,8 @@ public class Main{
                 case "esci":
                     System.out.println("Arrivederci");
                     break;
+                default:
+                    System.out.println("Errore devi inserire un comando di quelli elencati");
             }
         }while(c1.getSaldo() != 0);
     }
