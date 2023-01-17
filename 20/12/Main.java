@@ -4,7 +4,7 @@ public class Main {
     //pag 108
     public static void main(String []args) throws ArithmeticException {
         Scanner s = new Scanner(System.in);
-        GestioneOrari g = new GestioneOrari(0,0,0);
+        GestioneOrari g = new GestioneOrari(20,10,30);
         int h1 = 0;
         int m1 = 0;
         int s1 = 0;
