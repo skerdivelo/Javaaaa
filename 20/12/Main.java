@@ -1,7 +1,75 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
 public class Main{
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        ContoCorrente c1 = new ContoCorrente(2500);
+        String scelta;
+        do{
+            scelta = "";
+            System.out.println("Inserisci il comando (versa,preleva,esci): ");
+            try{
+                scelta = s.nextLine();
+            }
+            catch(Exception e){
+                System.out.println("Errore devi inserire un comando di quelli elencati");
+                scelta = "esci";
+            }
+            switch (scelta){
+                case "versa":
+                    try{
+                        System.out.println("Inserisci l'importo da versare: ");
+                        double importo = s.nextDouble();
+                        c1.versa(importo);
+                        System.out.println(c1.stampaSaldo());
+                    }catch(InputMismatchException e){
+                        System.out.println("Errore devi inserire un numero");
+                    }
+                    
+                    break;
+                case "preleva":
+                    try{
+                        System.out.println("Inserisci l'importo da prelevare: ");
+                        double importo1 = s.nextDouble();
+                        c1.preleva(importo1);
+                        System.out.println(c1.stampaSaldo());
+                    }
+                    catch(InputMismatchException e){
+                        System.out.println("Errore devi inserire un numero");
+                    }
+                case "esci":
+                    System.out.println("Arrivederci");
+                    break;
+            }
+        }while(c1.getSaldo() != 0);
+    }
+}
+
+
+
+
+        /*
+        int dividendo = 0;
+        Scanner s = new Scanner(System.in);
+        int divisore = 0;
+        do{
+            System.out.println("Inserisci un numero: ");
+            dividendo = s.nextInt();
+            System.out.println("Inserisci il divisore: ");
+            divisore = s.nextInt();
+            try{
+                System.out.println(dividendo/divisore);
+            }
+            catch(ArithmeticException e){
+                System.out.println("Non puoi dividere per 0");
+            }
+        }while(dividendo != 99 || divisore !=99);
+        
+    }
+}
+    
     public static void main(String[] args) {
         //li chiamo con il nome della classe poichè sono statici
         Scanner s = new Scanner(System.in);
@@ -66,3 +134,4 @@ public class Main{
         
     }   
 }
+ */
