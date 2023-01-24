@@ -1,6 +1,11 @@
+package PortoTuristico;
+//ObjectOutputStream stream = new ObjectOutputStream(new FileOutputStream("barca.bin"));
+//stream.writeObject(barca);
+//stream.close();
+
 import java.io.Serializable;
 
-public class Barca implements Serializable{
+public class Barca{
     private String nome;
     private String nazione;
     private int lunghezza;
@@ -23,6 +28,9 @@ public class Barca implements Serializable{
         this.tipologia = barca.getTipologia();
     }
     
+
+    public Barca(String nome2, String tipologia2, double lunghezza2, double stazza2) {
+    }
 
     public int getLunghezza() {
         return lunghezza;

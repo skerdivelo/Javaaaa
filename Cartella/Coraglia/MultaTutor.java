@@ -1,3 +1,5 @@
+package Cartella.Coraglia;
+
 public class MultaTutor{
     private String targa;
     private double tempo;

@@ -1,3 +1,5 @@
+package Cartella.Coraglia;
+
 import java.util.Scanner;
 
 public class Main {

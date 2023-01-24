@@ -1,3 +1,6 @@
+package Cartella.Coraglia;
+
+
 public class GestioneOrari extends Exception{
     private int h;
     private int m;

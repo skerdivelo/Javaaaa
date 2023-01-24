@@ -1,3 +1,6 @@
+package ContoCorrente;
+
+
 public class ContoCorrente {
     private double saldo;
     private int num = 543;
