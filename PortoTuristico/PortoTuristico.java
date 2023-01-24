@@ -7,27 +7,21 @@ class PortoTuristico {
         postiBarca = new Barca[100];
     }
 
-    public boolean assegnaPosto(Barca barca, int numeroPosto) {
-        if (numeroPosto < 1 || numeroPosto > 100) {
-            System.out.println("Numero posto non valido");
-            return false;
-        }
-        if (numeroPosto <= 20 && barca.getLunghezza() > 10) {
-            System.out.println("Questo posto non può ospitare barche più lunghe di 10 metri");
-            return false;
-        }
-        if (barca.getTipologia().equals("vela")) {
-            postiBarca[numeroPosto - 1] = barca;
-            System.out.println("La barca " + barca.getNome() + " è stata assegnata al posto " + numeroPosto);
-            return true;
-        }
-        else if (barca.getTipologia().equals("motore")) {
-            postiBarca[numeroPosto - 1] = barca;
-            System.out.println("La barca " + barca.getNome() + " è stata assegnata al posto " + numeroPosto);
-            return true;
-        }
-        else {
-            System.out.println("Questo posto non è disponibile per le barche a vela");
+    public boolean assegnaPosto(int numeroPosto, Barca barca){
+        try{
+            String nomeBarca = barca.getTipologia();
+            nomeBarca.toUpperCase();
+            if(numeroPosto<1 || numeroPosto > 100){
+                System.out.println("Errore, numero posto non valido");
+                return false;
+            }else if(numeroPosto <=20 && barca.getLunghezza() > 10){
+                System.out.println("Questo posto non può superare ");
+            }
+                postiBarca[numeroPosto - 1] = barca;
+                System.out.println("La barca " + barca.getNome() + " è stata assegnata al posto " + numeroPosto);
+                return true;
+        }catch(NullPointerException e){
+            System.out.println("Errore");
             return false;
         }
     }

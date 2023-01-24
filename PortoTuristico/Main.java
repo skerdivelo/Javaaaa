@@ -20,13 +20,13 @@ public class Main {
                     System.out.println("Inserisci la tipologia della barca");
                     String tipologia = sc.next();
                     System.out.println("Inserisci la lunghezza della barca");
-                    double lunghezza = sc.nextDouble();
+                    int lunghezza = sc.nextInt();
                     System.out.println("Inserisci la stazza della barca");
-                    double stazza = sc.nextDouble();
-                    Barca barca = new Barca(nome, tipologia, lunghezza, stazza);
+                    int stazza = sc.nextInt();
+                    Barca barca = new Barca(nome, lunghezza, stazza, tipologia);
                     System.out.println("Inserisci il numero del posto");
                     int numeroPosto = sc.nextInt();
-                    porto.assegnaPosto(barca, numeroPosto);
+                    porto.assegnaPosto(numeroPosto, barca);
                     break;
                 case 2:
                     System.out.println("Inserisci il numero del posto");
