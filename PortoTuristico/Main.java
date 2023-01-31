@@ -4,6 +4,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        String s = "Ciao";
+        String k = "Ciao";
+        System.out.println(s.toString());
+        System.out.println(k.toString());
+        if(s==k){
+            System.out.println("Dio");
+        }else{
+            System.out.println("no");
+        }
+        /*
         PortoTuristico porto = new PortoTuristico();
         Scanner sc = new Scanner(System.in);
         int scelta = 0;
@@ -51,6 +61,7 @@ public class Main {
                     System.out.println("Scelta non valida");
                     break;
             }
-        }while(scelta != 4); 
+        }while(scelta != 4);
+         */
     }    
 }

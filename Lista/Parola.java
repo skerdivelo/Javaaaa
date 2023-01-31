@@ -10,12 +10,16 @@ public class Parola {
     }
   
     public void inserisciInTesta(char lettera){
-      Nodo l = new Nodo(lettera);
-      l.setLink(head);
-      head = l;
+      Nodo z = new Nodo(lettera);
+      z.setLink(head);
+      head = z;
       elementi++;
     }
-  
+
+    public void scambiaLettera(int k, int h){
+      
+    }
+
     public void inserisciInCoda(char lettera){
       Nodo pn = new Nodo(lettera);
       
@@ -71,5 +75,18 @@ public class Parola {
       return s;
     }
   
-    
+    public void sostituisciLettera(int k, int h){
+      if(k>h)
+        return;
+      Nodo p = head;
+      int i = 0;
+      while(i < k){
+        p = p.getLink();
+        i++;
+      }
+      p.setInfo('X');
+      sostituisciLettera(k+1, h);
+    }
+
+
   }
