@@ -29,6 +29,7 @@ public class Biblioteca {
         return null;
     }
 
+
     public Libro cercaLibriAutore(String autore) {
         for (int i = 0; i < MAX_LIBRI; i++) {
             if (libri[i] != null && libri[i].getAutore().equals(autore)) {

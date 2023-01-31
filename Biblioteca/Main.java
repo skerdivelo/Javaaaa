@@ -4,9 +4,9 @@ import java.util.Scanner;
 class Main{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Libro libro = new Libro("Skerdi", " ", 0, "");
+        Libro libro = new Libro(" ", " ", 0, "");
         Biblioteca biblioteca = new Biblioteca();
-        String titolo = "Skerdi", autore= "Skerdi", editore=" ";
+        String titolo = "", autore= "", editore=" ";
         int scelta = 0, annoDiPubblicazione=0;
         do{
             System.out.println("1. Carica vettore");
