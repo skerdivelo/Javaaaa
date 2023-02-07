@@ -1,16 +1,16 @@
 package Computer;
 
 public class Computer {
-    private String codice;
+    private int codice;
     private String marca;
     private String modello;
-    private String processore;
+    private int processore;
     private int ram;
     private int hdd;
     private int dimensioniSchermo;
     private int annoDiAcquisto;
 
-    public Computer(String codice, String marca, String modello, String processore, int ram, int hdd, int dimensioniSchermo, int annoDiAcquisto) {
+    public Computer(int codice, String marca, String modello, int processore, int ram, int hdd, int dimensioniSchermo, int annoDiAcquisto) {
         this.codice = codice;
         this.marca = marca;
         this.modello = modello;
@@ -21,11 +21,22 @@ public class Computer {
         this.annoDiAcquisto = annoDiAcquisto;
     }
 
-    public String getCodice() {
+    public Computer(Computer computer) {
+        this.codice = computer.codice;
+        this.marca = computer.marca;
+        this.modello = computer.modello;
+        this.processore = computer.processore;
+        this.ram = computer.ram;
+        this.hdd = computer.hdd;
+        this.dimensioniSchermo = computer.dimensioniSchermo;
+        this.annoDiAcquisto = computer.annoDiAcquisto;
+    }
+
+    public int getCodice() {
         return codice;
     }
 
-    public void setCodice(String codice) {
+    public void setCodice(int codice) {
         this.codice = codice;
     }
 
@@ -45,11 +56,11 @@ public class Computer {
         this.modello = modello;
     }
 
-    public String getProcessore() {
+    public int getProcessore() {
         return processore;
     }
 
-    public void setProcessore(String processore) {
+    public void setProcessore(int processore) {
         this.processore = processore;
     }
 

@@ -4,10 +4,14 @@ public class Main {
     public static void main(String []args){
         Parola p = new Parola();
 
-        p.inserisciInCoda('A');
-        p.inserisciInCoda('N');
-        p.inserisciInCoda('G');
-        p.inserisciInCoda('Y');
-
+        p.inserisciInCoda('s');
+        p.inserisciInCoda('k');
+        p.inserisciInCoda('e');
+        p.inserisciInCoda('r');
+        p.inserisciInCoda('d');
+        p.inserisciInCoda('i');
+        System.out.println(p.toString());
+        p.scambiaPrimoUltimo();
+        System.out.println(p.toString());
     }
 }

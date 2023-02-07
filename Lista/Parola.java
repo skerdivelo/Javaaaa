@@ -16,8 +16,12 @@ public class Parola {
       elementi++;
     }
 
-    public void scambiaLettera(int k, int h){
-      
+    //elimina in testa
+    public void eliminaInTesta(){
+      if(head == null)
+        return;
+      head = head.getLink();
+      elementi--;
     }
 
     public void inserisciInCoda(char lettera){
@@ -33,6 +37,21 @@ public class Parola {
         p.setLink(pn);
       }
       elementi++;
+    }
+
+    public void eliminaInCoda(){
+      if(head == null)
+        return;
+      if(head.getLink() == null){
+        head = null;
+        elementi--;
+        return;
+      }
+      Nodo p = head;
+      while(p.getLink().getLink() != null)  
+        p = p.getLink();
+      p.setLink(null);
+      elementi--;
     }
   
     public int inserisciInPosizione(char lettera, int posizione){
@@ -64,6 +83,29 @@ public class Parola {
       }
       
     }
+
+    public int eliminaInPosizione(int posizione){
+      int i = 0;
+      if(posizione < 0)
+        return -1;
+      if(posizione == 1){
+        eliminaInTesta();
+        return 0;
+      }
+      else{
+        Nodo p = head;
+        if(posizione > elementi)
+          eliminaInCoda();
+        else{
+          while(i < posizione -1){
+            p = p.getLink();
+          }
+          p.setLink(p.getLink().getLink());
+          elementi--;
+        }
+        return 0;
+      }
+    }
   
     public String toString(){
       Nodo p = head;
@@ -88,5 +130,16 @@ public class Parola {
       sostituisciLettera(k+1, h);
     }
 
-
-  }
+    public void scambiaPrimoUltimo(){
+      Nodo p = head; //pn = penultimo nodo
+      Nodo pn = head;
+      while(p.getLink()!= null){
+        pn = p; 
+        p = p.getLink();
+      }
+      p.setLink(head.getLink());
+      head.setLink(null);
+      pn.setLink(head); 
+      head = p;
+    }
+}
