@@ -1,9 +1,11 @@
 package Computer;
 
 import java.io.BufferedWriter;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
@@ -21,21 +23,22 @@ public class GestioneComputer {
         while(computer[i]!=null){
             i++;
         }
+        computer[i]=new Computer(c);
         computer[i].setCodice(codiceIdentificativo);
-        computer[i]=c;
         codiceIdentificativo++;
     }
 
     public Computer cercaComputer(int codice){
         int i = 0;
-        while(computer[i]!=null || i<MAX_COMPUTER){
+        Computer c;
+        while(computer[i]!=null){  
             if(computer[i].getCodice()==codice){
-                Computer c = new Computer(computer[i]);
+                c = new Computer(computer[i]);
                 return c;
             }
             i++;
         }
-        return null;
+        return null; 
     }
     
     public Computer ricercaComputerMigliore(){
@@ -90,6 +93,19 @@ public class GestioneComputer {
                 e.printStackTrace();
                 System.out.println("Errore");
             }
+        }
+
+    }
+    public void ripristina() {
+        String nomeFile;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Da quale file vuoi effettuare il ripristino? ");
+        nomeFile = scanner.next() + ".txt";
+        try (FileInputStream fis = new FileInputStream(nomeFile); ObjectInputStream ois = new ObjectInputStream(fis)) {
+            computer = (Computer[]) ois.readObject();
+            System.out.println("Ripristino effettuato con successo");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Il file indicato non esiste");
         }
 
     }
