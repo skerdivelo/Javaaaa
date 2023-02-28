@@ -85,7 +85,7 @@ public class GestioneComputer {
                 e.printStackTrace();
             }
             // salvataggio su file dat
-            try (FileOutputStream fos = new FileOutputStream(nomeFile + ".dat");
+            try (FileOutputStream fos = new FileOutputStream(nomeFile + ".txt");
                     ObjectOutputStream oos = new ObjectOutputStream(fos)) {
                 oos.writeObject(computer);
                 System.out.println("Inventario salvato con successo");

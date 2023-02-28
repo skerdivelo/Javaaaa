@@ -5,11 +5,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         GestioneComputer gestioneComputer = new GestioneComputer();
-        Computer computer1 = new Computer(1, "Dell", "Inspiron", 2, 4, 500, 15, 2018);
+        Computer computer1;
 
         Scanner scanner = new Scanner(System.in);
         int scelta= 0;
         int codice = 0;
+        String marca, modello;
+        int processore, ram, hdd, dimensioniSchermo, annoDiAcquisto;
+
+        String inserisci = " ";
         do {
             System.out.println("1. Aggiungi computer");
             System.out.println("2. Cerca computer");
@@ -21,7 +25,22 @@ public class Main {
             scelta = scanner.nextInt();
             switch (scelta) {
                 case 1:
-                    gestioneComputer.aggiungiComputer(computer1);
+                    System.out.println("Inserisci la Marca: ");
+                    marca = scanner.nextLine();
+                    System.out.println("Inserisci la Modello: ");
+                    modello = scanner.nextLine();
+                    System.out.println("Inserisci il Processore: ");
+                    processore = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Inserisci la RAM: ");
+                    ram = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Inserisci la HDD: ");
+                    hdd = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Inserisci la Dimensione dello Schermo: ");
+                    dimensioniSchermo = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Inserisci l'Anno di Acquisto: ");
+                    annoDiAcquisto = Integer.parseInt(scanner.nextLine());
+                    computer1 = new Computer(marca, modello, processore, ram, hdd, dimensioniSchermo, annoDiAcquisto);
+
                     break;
                 case 2:
                     System.out.print("Inserisci codice: ");

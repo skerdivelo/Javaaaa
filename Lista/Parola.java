@@ -137,9 +137,8 @@ public class Parola {
         pn = p; 
         p = p.getLink();
       }
-      p.setLink(head.getLink());
-      head.setLink(null);
-      pn.setLink(head); 
-      head = p;
+      char temp = head.getInfo();
+      head.setInfo(p.getInfo());
+      p.setInfo(temp);
     }
 }

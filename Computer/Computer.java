@@ -10,8 +10,7 @@ public class Computer {
     private int dimensioniSchermo;
     private int annoDiAcquisto;
 
-    public Computer(int codice, String marca, String modello, int processore, int ram, int hdd, int dimensioniSchermo, int annoDiAcquisto) {
-        this.codice = codice;
+    public Computer(String marca, String modello, int processore, int ram, int hdd, int dimensioniSchermo, int annoDiAcquisto) {
         this.marca = marca;
         this.modello = modello;
         this.processore = processore;
