@@ -1,0 +1,3 @@
+Paziente{paziente=Persona{nome=Giuseppe, cognome=Bianchi, nascita=1992, sesso=m}, colore=v}
+Paziente{paziente=Persona{nome=Mario, cognome=Rossi, nascita=1990, sesso=m}, colore=r}
+Paziente{paziente=Persona{nome=Luigi, cognome=Verdi, nascita=1991, sesso=m}, colore=g}
