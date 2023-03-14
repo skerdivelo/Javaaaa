@@ -16,7 +16,7 @@ public class Coda {
         Nodo p = new Nodo(lettera);
         if(isEmpty()){
             tail = p;
-            head = p;
+            head = tail;
         }else{
             tail.setLink(p);
             tail = p;

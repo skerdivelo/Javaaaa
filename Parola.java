@@ -1,4 +1,6 @@
-package Lista;
+
+
+import Lista.Nodo;
 
 public class Parola {
     private Nodo head;
@@ -90,6 +92,7 @@ public class Parola {
         return -1;
       if(posizione == 1){
         eliminaInTesta();
+        elementi--;
         return 0;
       }
       else{

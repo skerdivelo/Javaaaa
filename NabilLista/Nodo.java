@@ -1,20 +1,23 @@
-package Lista;
-
+package NabilLista;
 
 public class Nodo{
-    private Email info;
+    private char info;
     private Nodo link;
   
-    public Nodo(Email info){
+    public Nodo(char info){
       this.info = info;
       link = null;
     }
+    public Nodo(Nodo n){
+        this.info = n.info;
+        link = null;
+    }
   
-    public void setInfo(Email info){
+    public void setInfo(char info){
       this.info = info;
     }
   
-    public Email getInfo(){
+    public char getInfo(){
       return info;
     }
   
@@ -25,9 +28,4 @@ public class Nodo{
     public Nodo getLink(){
       return link;
     }
-
-    @Override
-    public String toString() {
-        return "Nodo{" + "info=" + info + ", link=" + link + '}';
-    }
-  }
+}
