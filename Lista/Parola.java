@@ -1,7 +1,4 @@
-
-
-import Lista.Nodo;
-
+package Lista;
 public class Parola {
     private Nodo head;
     private int elementi;

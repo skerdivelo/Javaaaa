@@ -13,7 +13,7 @@ public class Mailbox{
         Nodo pn = new Nodo(m);
         pn.setLink(head);
         head = pn;
-        elementi ++;
+        elementi++;
     }
 
     public void eliminaMail(int pos){
@@ -28,7 +28,7 @@ public class Mailbox{
                 i++;
             }
             pp.setLink(p.getLink());
-            elementi --;
+            elementi--;
         }    
     }
 
