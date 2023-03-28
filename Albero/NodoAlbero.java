@@ -1,10 +1,10 @@
 package Albero;
 
-import Allenamento.Nodo;
+
 
 public class NodoAlbero {
 
-    private char info;
+    private char inf
     private NodoAlbero pfc;
     private NodoAlbero pfs;
    
