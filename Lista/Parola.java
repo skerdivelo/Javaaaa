@@ -126,19 +126,18 @@ public class Parola {
         p = p.getLink();
         i++;
       }
-      p.setInfo('X');
       sostituisciLettera(k+1, h);
     }
 
-    public void scambiaPrimoUltimo(){
-      Nodo p = head; //pn = penultimo nodo
-      Nodo pn = head;
-      while(p.getLink()!= null){
-        pn = p; 
+    //elimina il penultimo nodo
+    public void eliminaPenultimo(){
+      if(head == null)
+        return;
+      }
+      Nodo p = head, pn = head;
+      while(p.getLink().getLink() != null){
+        pn = p;
         p = p.getLink();
       }
-      char temp = head.getInfo();
-      head.setInfo(p.getInfo());
-      p.setInfo(temp);
-    }
+      p.setLink(pn.getLink());
 }

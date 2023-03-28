@@ -24,4 +24,9 @@ public class Nodo{
     public void setLink(Nodo link) {
         this.link = link;
     }
+
+    @Override
+    public String toString() {
+        return "info=" + info;
+    }
 }

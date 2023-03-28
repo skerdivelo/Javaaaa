@@ -39,9 +39,12 @@ public class Cinema {
     }
 
     public void stampa() {
+        //stampo tail
+        System.out.println("La persona che sta per entrare è: "+tail.toString()+"\n--------------------------------------------");
+        //stampo la lista
         Nodo n = head;
         while (n != null) {
-            System.out.println(n.getInfo());
+            System.out.println(n.toString());
             n = n.getLink();
         }
     }
