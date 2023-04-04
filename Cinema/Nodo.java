@@ -1,15 +1,17 @@
 package Cinema;
 
+import Students.Studente;
+
 public class Nodo{
-    private Persona info;
+    private Studente info;
     private Nodo link;
 
-    public Nodo(Persona info){
+    public Nodo(Studente info){
         this.info = info;
         this.link = null;
     }
 
-    public Persona getInfo() {
+    public Studente getInfo() {
         return info;
     }
 
@@ -17,7 +19,7 @@ public class Nodo{
         return link;
     }
 
-    public void setInfo(Persona info) {
+    public void setInfo(Studente info) {
         this.info = info;
     }
 

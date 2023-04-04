@@ -2,6 +2,8 @@ package Cinema;
 
 import java.util.Scanner;
 
+import Students.Studente;
+
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -24,11 +26,11 @@ public class Main {
                     int nascita = input.nextInt();
                     System.out.print("Sesso: ");
                     char sesso = input.next().charAt(0);
-                    Persona p = new Persona(nome, cognome, nascita, sesso);
+                    Studente p = new Studente(nome, cognome, nascita, sesso);
                     c.enqueue(p);
                     break;
                 case 2:
-                    Persona p1 = c.dequeue();
+                    Studente p1 = c.dequeue();
                     if (p1 == null) {
                         System.out.println("Coda vuota");
                     } else {

@@ -1,5 +1,7 @@
 package Cinema;
 
+import Students.Studente;
+
 public class Cinema {
     private Nodo head;
     private Nodo tail;
@@ -11,7 +13,7 @@ public class Cinema {
         this.elementi = 0;
     }
 
-    public void enqueue(Persona p) {
+    public void enqueue(Studente p) {
         Nodo n = new Nodo(p);
         if (head == null) {
             head = n;
@@ -23,11 +25,11 @@ public class Cinema {
         elementi++;
     }
 
-    public Persona dequeue() {
+    public Studente dequeue() {
         if (head == null) {
             return null;
         } else {
-            Persona p = head.getInfo();
+            Studente p = head.getInfo();
             head = head.getLink();
             elementi--;
             return p;
