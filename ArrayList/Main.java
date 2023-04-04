@@ -1,13 +1,30 @@
 package ArrayList;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
-        ProductList listaProdotti = new ProductList();
+        ArrayList<String> nomi = new ArrayList<>();
+        nomi.add("Mario");
+        nomi.add("Luigi");
+        nomi.add("Pippo");
+        nomi.add("Pluto");
+        Iterator<String> it = nomi.iterator();
+        while(it.hasNext()){
+            String nome = it.next();
+            if(nome.equals("Pippo")){
+                it.remove();
+            }
+        }
+        for(String nome : nomi){
+            System.out.println(nome);
+        }
+        //ProductList listaProdotti = new ProductList();
         //faccio switch case per scegliere cosa fare
+        /*
         int scelta = 0;
         do{
             System.out.println("1. Aggiungi prodotto");
@@ -41,5 +58,6 @@ public class Main {
             }
         }while(scelta != 99);
         input.close();
+    */
     }
 }
