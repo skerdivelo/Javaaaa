@@ -3,7 +3,7 @@ package Training;
 public class Parola{
     private Nodo head;
     private int elementi;
-
+//fghjk
     public Parola(){
         head = null;
         elementi = 0;
