@@ -5,7 +5,7 @@ public class Main {
         Pila pila=new Pila();
         Pila pila2=new Pila();
         while(!pila.isEmpty()){
-            pila.pop()
+            pila.pop();
         }
         pila.push('a');
         pila.push('l');

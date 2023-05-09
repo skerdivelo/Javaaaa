@@ -11,8 +11,7 @@ public class Main {
         parola.InserisciInTesta('n');
 
         parola.Duplica();
-
-        parola.trovaVocale('l');
+;
         parola.EliminaInPosizione(5);
         System.out.println(parola.toString());
         

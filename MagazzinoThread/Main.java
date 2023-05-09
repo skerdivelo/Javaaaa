@@ -14,8 +14,25 @@ public class Main {
             for (int i = 0; i < 100; i++) {
                 t1.run();
                 t2.run();
+                if(magazzino.getProdotto() >= 90){
+                    System.out.println("*********");
+                } else if(magazzino.getProdotto() >= 50){
+                    System.out.println("********");
+                } else if(magazzino.getProdotto() >= 20){
+                    System.out.println("*******");
+                } else if(magazzino.getProdotto() >= 10){
+                    System.out.println("******");
+                } else if(magazzino.getProdotto() >= 5){
+                    System.out.println("*****");
+                } else if(magazzino.getProdotto() >= 2){
+                    System.out.println("****");
+                } else if(magazzino.getProdotto() >= 1){
+                    System.out.println("**");
+                } else if(magazzino.getProdotto() == 0){
+                    System.out.println("*");
+                }
             }
-            if (magazzino.getProdotto() < 2) {
+            /* if (magazzino.getProdotto() < 2) {
                 System.out.println("************************************");
                 System.out.println("|                                  |");
                 System.out.println("|                                  |");
@@ -25,7 +42,7 @@ public class Main {
                 System.out.println("|                                  |");
                 System.out.println("|                                  |");
                 System.out.println("************************************");
-            }
+            } */
             
         } catch (Exception e){
             System.out.println(e);

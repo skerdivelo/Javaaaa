@@ -77,8 +77,4 @@ public class Parola{
         p.setLink(pn);
         elementi++;
     }
-
-    public Nodo eliminaInPosizione(){
-        
-    }
 }
