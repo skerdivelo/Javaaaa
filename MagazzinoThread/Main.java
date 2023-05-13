@@ -19,6 +19,8 @@ public class Main {
             for (int i = 0; i < 100; i++) {
                 t1.run();
                 t2.run();
+                t3.run();
+                t4.run();
                 if(magazzino.getProdotto() >= 90){
                     System.out.println("*********");
                 } else if(magazzino.getProdotto() >= 50){
@@ -36,19 +38,19 @@ public class Main {
                 } else if(magazzino.getProdotto() == 0){
                     System.out.println("*");
                 }
-                if (magazzino.getProdotto() < 2) {
-                    System.out.println("************************************");
-                    System.out.println("|                                  |");
-                    System.out.println("|                                  |");
-                    System.out.println("|                                  |");
-                    System.out.println("|     LE SCORTE STANNO FINENDO     |");
-                    System.out.println("|                                  |");
-                    System.out.println("|                                  |");
-                    System.out.println("|                                  |");
-                    System.out.println("************************************");
-                }
+                
             }
-            
+            if (magazzino.getProdotto() < 2) {
+                System.out.println("************************************");
+                System.out.println("|                                  |");
+                System.out.println("|                                  |");
+                System.out.println("|                                  |");
+                System.out.println("|     LE SCORTE STANNO FINENDO     |");
+                System.out.println("|                                  |");
+                System.out.println("|                                  |");
+                System.out.println("|                                  |");
+                System.out.println("************************************");
+            }
             
         } catch (Exception e){
             System.out.println(e);

@@ -12,6 +12,7 @@ public class Magazzino {
         if (quantita > 0 && quantita <= 5) {
             if (prodotto >= quantita) {
                 prodotto -= quantita;
+                System.out.println("Prelevati " + quantita + " prodotti");
                 return prodotto;
             } else {
                 return -1;
