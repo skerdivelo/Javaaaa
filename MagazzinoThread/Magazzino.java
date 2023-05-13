@@ -2,7 +2,6 @@ package MagazzinoThread;
 
 public class Magazzino {
     private static int prodotto;
-    private static int quantita = 5;
 
     public Magazzino() {
         prodotto = 100;
