@@ -24,6 +24,9 @@ public class Main {
                 t2.run();
                 t3.run();
                 t4.run();
+                if(magazzino.getProdotto() <= 10){
+                    JOptionPane.showMessageDialog(null, "Prodotto in esaurimento");
+                }
             }
         }catch(Exception e){
             return;
