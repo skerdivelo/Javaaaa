@@ -21,9 +21,9 @@ public class Main {
         try{
             for(int i = 0; i < 100; i++){
                 t1.run();
-                t2,run();
+                t2.run();
                 t3.run();
-                t4.rn();
+                t4.run();
             }
         }catch(Exception e){
             return;
