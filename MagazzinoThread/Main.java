@@ -1,4 +1,7 @@
 package MagazzinoThread;
+//import java swing
+import javax.swing.*;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -15,46 +18,14 @@ public class Main {
         t2.start();
         t3.start();
         t4.start();
-        try {
-            for (int i = 0; i < 100; i++) {
-                t1.run();
-                t2.run();
-                t3.run();
-                t4.run();
-                if(magazzino.getProdotto() >= 90){
-                    System.out.println("*********");
-                } else if(magazzino.getProdotto() >= 50){
-                    System.out.println("********");
-                } else if(magazzino.getProdotto() >= 20){
-                    System.out.println("*******");
-                } else if(magazzino.getProdotto() >= 10){
-                    System.out.println("******");
-                } else if(magazzino.getProdotto() >= 5){
-                    System.out.println("*****");
-                } else if(magazzino.getProdotto() >= 2){
-                    System.out.println("****");
-                } else if(magazzino.getProdotto() >= 1){
-                    System.out.println("**");
-                } else if(magazzino.getProdotto() == 0){
-                    System.out.println("*");
-                }
-                
-            }
-            if (magazzino.getProdotto() < 2) {
-                System.out.println("************************************");
-                System.out.println("|                                  |");
-                System.out.println("|                                  |");
-                System.out.println("|                                  |");
-                System.out.println("|     LE SCORTE STANNO FINENDO     |");
-                System.out.println("|                                  |");
-                System.out.println("|                                  |");
-                System.out.println("|                                  |");
-                System.out.println("************************************");
-            }
-            
-        } catch (Exception e){
-            System.out.println(e);
+        try{
+            t1.run();
+            Thread.sleep(1000);
+            t2.run();
+            t3.run();
+            t4.run();
+        }catch(Exception e){
+            return;
         }
-        System.out.println(magazzino);
     }
 }

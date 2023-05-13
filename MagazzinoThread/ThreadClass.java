@@ -1,5 +1,7 @@
 package MagazzinoThread;
 
+import javax.swing.*;
+
 public class ThreadClass implements Runnable{
     private Magazzino magazzino;
 
@@ -12,12 +14,29 @@ public class ThreadClass implements Runnable{
     public void run() {
         int quantita = (int) (Math.random() * 5);
         int preleva = magazzino.preleva(quantita);
-        if (preleva == -1) {
-            System.out.println("Non ci sono abbastanza prodotti");
-        } else if (preleva == -2) {
-            System.out.println("Non puoi prelevare più di 5 prodotti");
-        } else {
-            System.out.println("Hai prelevato " + quantita + " prodotti");
+        JFrame frame = new JFrame("Magazzino");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JLabel label;
+        JProgressBar progressBar;
+        
+        frame.setSize(500, 500);
+        label = new JLabel();
+        label.setHorizontalAlignment(JLabel.CENTER);
+        progressBar = new JProgressBar(0, 100);
+        //color of the progress bar is green
+        progressBar.setForeground(java.awt.Color.GREEN);
+        frame.add(label);
+        frame.add(progressBar, "South");
+        try {
+            for (int i = 0; i < 100; i++) {
+                label.setText(magazzino.toString());
+                progressBar.setValue(magazzino.getProdotto());
+                frame.repaint();
+                
+            }
+            frame.setVisible(true);
+        } catch (Exception e){
+            System.out.println(e);
         }
     }
 }
