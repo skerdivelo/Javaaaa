@@ -19,11 +19,12 @@ public class Main {
         t3.start();
         t4.start();
         try{
-            t1.run();
-            Thread.sleep(1000);
-            t2.run();
-            t3.run();
-            t4.run();
+            for(int i = 0; i < 100; i++){
+                t1.run();
+                t2,run();
+                t3.run();
+                t4.rn();
+            }
         }catch(Exception e){
             return;
         }

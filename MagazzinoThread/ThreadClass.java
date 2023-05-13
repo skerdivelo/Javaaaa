@@ -23,6 +23,8 @@ public class ThreadClass implements Runnable{
         label = new JLabel();
         label.setHorizontalAlignment(JLabel.CENTER);
         progressBar = new JProgressBar(0, 100);
+        //increase size of the progress bar
+        progressBar.setPreferredSize(new java.awt.Dimension(500, 50));
         //color of the progress bar is green
         progressBar.setForeground(java.awt.Color.GREEN);
         frame.add(label);
