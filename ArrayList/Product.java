@@ -1,6 +1,6 @@
 package ArrayList;
 
-public class Product {
+public class Product  implements Comparable<Product>{
     private String nome;
     private int prezzo;
 
@@ -23,6 +23,11 @@ public class Product {
 
     public void setPrezzo(int prezzo) {
         this.prezzo = prezzo;
+    }
+
+    @Override
+    public int compareTo(Product o) {
+        return this.nome.compareTo(o.getNome());
     }
 
 }

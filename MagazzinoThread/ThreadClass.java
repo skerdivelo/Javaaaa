@@ -15,11 +15,13 @@ public class ThreadClass implements Runnable{
         int quantita = (int) (Math.random() * 5);
         int preleva = magazzino.preleva(quantita);
         JFrame frame = new JFrame("Magazzino");
+        //align the frame in the center of the screen
+        frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JLabel label;
         JProgressBar progressBar;
         
-        frame.setSize(500, 500);
+        frame.setSize(500, 200);
         label = new JLabel();
         label.setHorizontalAlignment(JLabel.CENTER);
         progressBar = new JProgressBar(0, 100);
